@@ -74,14 +74,14 @@ Setup Chef Server
 - Setup chef user as admin (on virtual host chef-server)
 
   ```
-  docker exec -ti vagrant_chef-server_1 chef-server-ctl user-create jorge_flores Jorge Flores jorgef.flores@gmail.com NmNmMTI0OTYw
+  sudo docker exec -ti vagrant_chef-server_1 chef-server-ctl user-create jorge_flores Jorge Flores jorgef.flores@gmail.com NmNmMTI0OTYw
   ```
 
   > save the key  
 
   ```
-  docker exec -ti vagrant_chef-server_1 chef-server-ctl org-create demoltda Demo
-  docker exec -ti vagrant_chef-server_1 chef-server-ctl org-user-add demoltda jorge_flores  --admin
+  sudo docker exec -ti vagrant_chef-server_1 chef-server-ctl org-create demoltda Demo
+  sudo docker exec -ti vagrant_chef-server_1 chef-server-ctl org-user-add demoltda jorge_flores  --admin
   ```
   
 
