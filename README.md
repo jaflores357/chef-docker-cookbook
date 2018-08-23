@@ -28,7 +28,8 @@ Install Docker on chef-server
 - Install docker package (on virtual host chef-server)
 
   ```
-  curl https://download.docker.com/linux/centos/docker-ce.repo > /etc/yum.repos.d/docker-ce.repo
+  curl https://download.docker.com/linux/centos/docker-ce.repo > docker-ce.repo
+  sudo mv docker-ce.repo /etc/yum.repos.d/
   sudo yum install docker-ce
   ```
 
