@@ -4,6 +4,7 @@ Install Vagrant and VirtualBox
 - Install packages (on your host)
 
 https://www.vagrantup.com/downloads.html
+
 https://www.virtualbox.org/
 
 Up vagrant file
@@ -36,9 +37,13 @@ Install Docker Compose on CentOS
 - Install docker-compose tool (on virtual host chef-server)
 
   sudo yum install -y epel-release
+  
   sudo yum -y install python-pip
+  
   pip install --upgrade pip
+  
   pip install docker-compose
+  
 
 Run docker compose
 ------------------
@@ -46,6 +51,7 @@ Run docker compose
 - Up docker-compose file deamon mode (on virtual host chef-server)
 
   cd /vagrant
+  
   sudo docker-compose -f chef-compose.yml up -d
 
 
@@ -59,15 +65,17 @@ Setup Chef Server
   >>> save the key  
 
   docker exec -ti root_chef-server_1 chef-server-ctl org-create demoltda Demo
+  
   docker exec -ti root_chef-server_1 chef-server-ctl org-user-add demoltda jorge_flores  --admin
-
+  
 
 Setup chef connection 
 ---------------------
 
 - Setup knife.rb (on your host)
 
-  on folder chef-repo, edit the file .chef/knife.rb and setup your user name, org name, etc
+  folder chef-repo, edit the file .chef/knife.rb and setup your user name, org name, etc
+  
   copy the user key to .chef/ with the name describe in client_key attribute on knife.rb file
 
 
@@ -77,13 +85,18 @@ Upload environment, role and cookbook
 - Using knife command (on your host)
 
   knife upload roles/prd-app.json
+  
   knife upload environment/prdo.json
+  
   
 - Upload cookbook using berkshelf (on your host)
 
   cd cookbooks/jf_docker
+  
   berks 
+  
   berks upload
+  
 
 
 Bootstrap app01
