@@ -11,7 +11,7 @@ log_location STDOUT
 
 # Chef server configuration.
 chef_server_url "https://192.168.136.101/organizations/#{org_name}"
-client_key "/Users/jorge.flores/meetup/chef-repo/.chef/jorge_flores.pem"
+client_key "#{current_dir}/jorge_flores.pem"
 node_name "#{username}"
 ssl_verify_mode :verify_none
 
