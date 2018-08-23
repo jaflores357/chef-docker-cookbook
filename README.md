@@ -65,17 +65,23 @@ Run docker compose
 Setup Chef Server
 -----------------
 
+- Configure server
+  
+  ```
+  sudo docker exec -ti  vagrant_chef-server_1 chef-server-ctl reconfigure
+  ```
+
 - Setup chef user as admin (on virtual host chef-server)
 
   ```
-  docker exec -ti root_chef-server_1 chef-server-ctl user-create jorge_flores Jorge Flores jorgef.flores@gmail.com NmNmMTI0OTYw
+  docker exec -ti vagrant_chef-server_1 chef-server-ctl user-create jorge_flores Jorge Flores jorgef.flores@gmail.com NmNmMTI0OTYw
   ```
 
   > save the key  
 
   ```
-  docker exec -ti root_chef-server_1 chef-server-ctl org-create demoltda Demo
-  docker exec -ti root_chef-server_1 chef-server-ctl org-user-add demoltda jorge_flores  --admin
+  docker exec -ti vagrant_chef-server_1 chef-server-ctl org-create demoltda Demo
+  docker exec -ti vagrant_chef-server_1 chef-server-ctl org-user-add demoltda jorge_flores  --admin
   ```
   
 
