@@ -102,7 +102,7 @@ Upload environment, role and cookbook
 
   ```
   knife upload roles/prd-app.json
-  knife upload environment/prdo.json
+  knife upload environments/prod.json
   ```
   
 - Upload cookbook using berkshelf (on your host)
