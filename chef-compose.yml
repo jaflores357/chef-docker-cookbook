@@ -1,0 +1,12 @@
+chef-server:
+    image: cbuisson/chef-server
+    privileged: true
+    environment:
+    - CONTAINER_NAME=chef.dockercookbook.com
+    ports:
+        - "443:443"
+    volumes:
+        - ./var/log:/var/log
+        - ./var/opt/opscode:/var/opt/opscode
+        - ./var/opt/chef-backup:/var/opt/chef-backup
+        - ./etc/opscode:/etc/opscode

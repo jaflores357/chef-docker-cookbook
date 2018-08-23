@@ -1,0 +1,12 @@
+{
+	
+<% 
+list = []
+@data.each do |url, pass| 
+  list << "\"#{url}\": {\"auth\": \"#{pass}\"}"
+end 
+%>
+"auths": {
+   <%= list.join(',') %>	   
+  }
+}

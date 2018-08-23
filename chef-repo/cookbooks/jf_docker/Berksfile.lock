@@ -1,0 +1,9 @@
+DEPENDENCIES
+  jf_docker
+    path: .
+    metadata: true
+
+GRAPH
+  docker (2.15.26)
+  jf_docker (0.1.0)
+    docker (~> 2.0)
