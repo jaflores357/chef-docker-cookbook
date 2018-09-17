@@ -65,12 +65,6 @@ Run docker compose
 Setup Chef Server
 -----------------
 
-- Configure server
-  
-  ```
-  sudo docker exec -ti  vagrant_chef-server_1 chef-server-ctl reconfigure
-  ```
-
 - Setup chef user as admin (on virtual host chef-server)
 
   ```
