@@ -119,7 +119,14 @@ Bootstrap app01
 - Bootstrap your host (on your host)
 
   ```
-  knife bootstrap -E "prod" --sudo -x vagrant -i .vagrant/machines/app01/virtualbox/private_key -N app01 192.168.136.111 --node-ssl-verify-mode none -r 'role[prd-app]'
+  knife bootstrap -E "prod" \
+  --sudo \
+  -x vagrant \
+  -i .vagrant/machines/app01/virtualbox/private_key \
+  -N app01 \
+  192.168.136.111 \
+  --node-ssl-verify-mode none \
+  -r 'role[prd-app]'
   ```
   
 Run chef client on app01
